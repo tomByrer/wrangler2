@@ -1,5 +1,23 @@
 # wrangler
 
+## 2.0.8
+
+### Patch Changes
+
+- [#1122](https://github.com/cloudflare/wrangler2/pull/1122) [`c2d2f44`](https://github.com/cloudflare/wrangler2/commit/c2d2f4420cb30f54fc90bd6bf9728adb4bbb0ab2) Thanks [@petebacondarwin](https://github.com/petebacondarwin)! - fix: display chained errors from the CF API
+
+  For example if you have an invalid CF_API_TOKEN and try running `wrangler whoami`
+  you now get the additional `6111` error information:
+
+  ```
+  ✘ [ERROR] A request to the Cloudflare API (/user) failed.
+
+    Invalid request headers [code: 6003]
+    - Invalid format for Authorization header [code: 6111]
+  ```
+
+* [#1122](https://github.com/cloudflare/wrangler2/pull/1122) [`c2d2f44`](https://github.com/cloudflare/wrangler2/commit/c2d2f4420cb30f54fc90bd6bf9728adb4bbb0ab2) Thanks [@petebacondarwin](https://github.com/petebacondarwin)! - fix: improve error message when CF API responds with an error
+
 ## 2.0.7
 
 ### Patch Changes
